@@ -274,6 +274,10 @@ nav a {
     margin: auto;
 }
 
+.card-img {
+    cursor: pointer;
+}
+
 .card-img-overlay {
     color: black;
 }
