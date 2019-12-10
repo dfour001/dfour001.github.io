@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+
+    <!-- Dan's CSS -->
+    <link rel="stylesheet" href="css/style6.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Anton|Lato|Oswald&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Ionicon -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <title>Daniel Fourquet</title>
+</head>
+
+<body>
+    <!-- Background map -->
+    <div id="bkgMap"></div>
+
+    <!-- Block map from panning 
+    <div id="mapBlock"></div>
+-->
+    <!-- Main div keeps the rest of the page on top of map -->
+    <div id="title" class="container-fluid">
+        <div class="title-container">
+            <h1 class="name background-dark borderTop">DANIEL FOURQUET</h1>
+
+            <!-- Text navbar for wide screens -->
+            <nav id="navText" class="background-dark borderTop borderBottom dfNav">
+                <ul class="navbar-nav navbar-text">
+                    <li class="active">Home</li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="http://www.danielfourquet.com/blog/" target="_blank">Blog</a></li>
+                </ul>
+            </nav>
+
+            <!-- Icon navbar for mobile -->
+            <nav id="navTabs" class="background-dark borderTop borderBottom dfNav">
+                <ul class="navbar-nav navbar-text">
+                    <li class="nav-item">
+                        <ion-icon name="home" class="active"></ion-icon><br><small class="active">Home</small>
+                    </li>
+                    <li class="nav-item"><a href="resume.html">
+                            <ion-icon name="today"></ion-icon><br><small>Resume</small>
+                        </a></li>
+                    <li><a href="portfolio.html">
+                            <ion-icon name="images"></ion-icon><br><small>Portfolio</small>
+                        </a></li>
+                    <li><a href="http://www.danielfourquet.com/blog" target="_blank">
+                            <ion-icon name="logo-wordpress"></ion-icon><br><small>Blog</small>
+                        </a></li>
+                </ul>
+            </nav>
+
+            <div id="downArrow">
+                <a href="#About">
+                    <ion-icon name="arrow-dropdown" size="large"></ion-icon>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="container">
+        <h2 id="About" class="text-center">About Me</h2>
+        <div class="row mb-5">
+            <div class="col-md-4 text-center mt-5">
+                <img class="img-thumbnail" src="https://via.placeholder.com/150">
+            </div>
+
+            <p class="col-md-8 background-dark borderAll mt-5 p-3">(w.t) Marty, the entire future depends on you finding Biff and getting that book back! (Strickland’s Office) (Outside, Biff gets out of the car. George tries to punch him, but Biff grabs his arm and twists it, causing George to let out cries of pain.) (w.t) I know! I just don't know where... Stop it, stop it Biff! You're gonna break his arm! Stop it!</p>
+        </div>
+    </div>
+
+
+
+    <footer class="background-dark borderTop page-footer">
+        <script>
+            $('footer').load('footer.html');
+
+        </script>
+    </footer>
+
+    <!-- Optional JavaScript -->
+
+
+
+    <!-- Navbar Show/Hide Control -->
+    <script>
+        // Controls if the navbar is fixed-top or relative postion based on the current window scroll
+
+        var navText = $('#navText');
+        var navTextTop = navText.position().top;
+        var navTabs = $('#navTabs');
+        var navTabsTop = navTabs.position().top;
+
+        function update_navbar_position(navbar, navTop) {
+            // Check for the top of the navbar and the top of the screen
+            // If screen is below navbar, make navbar fixed-top
+            let scrollPos = $(document).scrollTop();
+            if (scrollPos >= navTop) {
+                navbar.addClass('fixed-top');
+            } else {
+                navbar.removeClass('fixed-top');
+            }
+        }
+
+        // On scroll
+        $(window).scroll(function() {
+            update_navbar_position(navText, navTextTop);
+            update_navbar_position(navTabs, navTabsTop);
+        })
+
+    </script>
+
+    <!-- Background Map Control -->
+    <script>
+        var map = L.map("bkgMap", {
+            attributionControl: false,
+            zoomControl: false,
+            minZoom: 8,
+            maxZoom: 8
+        }).setView([37.5407, -77.4360], 8);
+
+        map.dragging.disable();
+        map.touchZoom.disable();
+        map.doubleClickZoom.disable();
+        map.scrollWheelZoom.disable();
+        map.boxZoom.disable();
+        map.keyboard.disable();
+        if (map.tap) map.tap.disable();
+        document.getElementById('bkgMap').style.cursor = 'default';
+
+        L.tileLayer('https://api.mapbox.com/styles/v1/dfour001/cjmscu6hj1bt62snsg1zy2526/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZGZvdXIwMDEiLCJhIjoiY2l4ampyMjRvMDAwbDMzbGpjM284M3JtNCJ9.SOrSY0H8h86RcdOh9fTDhw').addTo(map);
+
+    </script>
+</body>
+
+</html>
