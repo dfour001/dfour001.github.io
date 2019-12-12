@@ -253,6 +253,10 @@ nav a {
     color: white;
 }
 
+.portrait {
+    max-width: 200px;
+}
+
 .card-deck {
     margin-bottom: 15px;
 }

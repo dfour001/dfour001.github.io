@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
 
     <!-- Dan's CSS -->
-    <link rel="stylesheet" href="css/style6.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Anton|Lato|Oswald&display=swap" rel="stylesheet">
@@ -89,10 +89,13 @@
         <h2 id="About" class="text-center">About Me</h2>
         <div class="row mb-5">
             <div class="col-md-4 text-center mt-5">
-                <img class="img-thumbnail" src="https://via.placeholder.com/150">
+                <img class="portrait img-thumbnail"src="images/profile.jpg">
             </div>
 
-            <p class="col-md-8 background-dark borderAll mt-5 p-3">(w.t) Marty, the entire future depends on you finding Biff and getting that book back! (Strickland’s Office) (Outside, Biff gets out of the car. George tries to punch him, but Biff grabs his arm and twists it, causing George to let out cries of pain.) (w.t) I know! I just don't know where... Stop it, stop it Biff! You're gonna break his arm! Stop it!</p>
+            <div class="col-md-8 background-dark borderAll mt-5 p-3">
+                <p>I'm Daniel, a GIS analyst from Richmond, VA. For as long as I can remember I have been fascinated with maps - I would always have an atlas in my hands during family road trips as a child. I would even draw maps of imaginary places. Since then I have managed to turn fascination into a career, working with GIS since I finished studying geography at ODU in 2010.</p>
+                <p>I am interested in cartography, programming, playing guitar, and basically any other creative task. Take a look at my <a href="portfolio.html">portfolio</a> for samples of my work.  Every now and then I'll post about my latest mapping endeavors in my <a href="https://www.danielfourquet.com/blog" target="_blank">blog</a>.</p>
+            </div>
         </div>
     </div>
 
@@ -101,7 +104,6 @@
     <footer class="background-dark borderTop page-footer">
         <script>
             $('footer').load('footer.html');
-
         </script>
     </footer>
 
@@ -134,7 +136,6 @@
             update_navbar_position(navText, navTextTop);
             update_navbar_position(navTabs, navTabsTop);
         })
-
     </script>
 
     <!-- Background Map Control -->
@@ -156,8 +157,5 @@
         document.getElementById('bkgMap').style.cursor = 'default';
 
         L.tileLayer('https://api.mapbox.com/styles/v1/dfour001/cjmscu6hj1bt62snsg1zy2526/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZGZvdXIwMDEiLCJhIjoiY2l4ampyMjRvMDAwbDMzbGpjM284M3JtNCJ9.SOrSY0H8h86RcdOh9fTDhw').addTo(map);
-
     </script>
-</body>
-
-</html>
+</body></html>
