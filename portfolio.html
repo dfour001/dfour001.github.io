@@ -72,6 +72,7 @@
     <div class="container containerWhite">
         <h2 id="About" class="text-center colorDark">Portfolio</h2>
         <br>
+        <p>Below is a sample of my work.  Click on the image for more information about that project.</p>
         <hr>
 
 
@@ -94,10 +95,17 @@
                 <br>
                 <!-- Web cards -->
                 <div class="card-columns">
+                    <div class="card" data-toggle="modal" data-target="#geog778">
+                        <img class="card-img" src="images/Geog778Thumb.jpg" alt="Card image">
+                    </div>
+
+                    <div class="card" data-toggle="modal" data-target="#geog576">
+                        <img class="card-img" src="images/GEOG576Thumb.jpg" alt="Card image">
+                    </div>   
+
                     <div class="card" data-toggle="modal" data-target="#geog575Lab1">
                         <img class="card-img" src="images/575Lab1Thumb.jpg" alt="Card image">
-                    </div>
-                    
+                    </div>                    
                     
                     <div class="card" data-toggle="modal" data-target="#geog575Lab2">
                         <img class="card-img" src="images/575Lab2Thumb.jpg" alt="Card image">
@@ -174,6 +182,55 @@
 
 
     <!-- Portfolio modal -->
+    <div class="modal fade" id="geog778" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header background-dark">
+                    <h3 class="modal-title" id="exampleModalLabel">Frequency Finder</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Insert content here -->
+                    <img class="img-thumbnail" src="images/Geog778Thumb.jpg">
+                    <div class="background-dark">
+                        <p><small><i>Created April 2021</i></small></p>
+                        <p><small><i>Flask, PostGIS</i></small></p>
+                    </div>
+                    <p>Frequency Finder was the practicum project for my masters.  The web application finds the FM radio frequencies available from an input location using PostGIS and a Flask API.</p>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn btn-secondary" href="https://youtu.be/WMTME8dhMXs" target="_blank">View Video Demo</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="geog576" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header background-dark">
+                    <h3 class="modal-title" id="exampleModalLabel">Richmond Time Machine</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Insert content here -->
+                    <img class="img-thumbnail" src="images/GEOG576Thumb.jpg">
+                    <div class="background-dark">
+                        <p><small><i>Created November 2020</i></small></p>
+                        <p><small><i>Java, Leaflet</i></small></p>
+                    </div>
+                    <p>This web application is a map-based photo gallery with a built in editor.  It was created as part of a course on creating web map applications with Java.</p>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn btn-secondary" href="https://youtu.be/J-O7kfiNEPA" target="_blank">View Video Demo</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="modal fade" id="geog575Lab1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
